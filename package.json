@@ -5,5 +5,12 @@
   "main": "src/index.pug",
   "repository": "https://github.com/cu39/example-material-ui-customized-component",
   "author": "cu39 <cu393uc@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4"
+  }
 }
