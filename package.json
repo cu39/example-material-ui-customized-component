@@ -10,8 +10,12 @@
     "dev": "parcel src/index.pug"
   },
   "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "typescript": "^3.6.4"
   }
 }
