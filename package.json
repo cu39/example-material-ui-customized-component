@@ -1,0 +1,9 @@
+{
+  "name": "example-material-ui-customized-component",
+  "version": "0.1.0",
+  "description": "Examples for customizing Material-UI components.",
+  "main": "src/index.pug",
+  "repository": "https://github.com/cu39/example-material-ui-customized-component",
+  "author": "cu39 <cu393uc@gmail.com>",
+  "license": "MIT"
+}
