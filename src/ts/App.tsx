@@ -1,12 +1,12 @@
 import * as React from 'react'
 import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
 import {
   Theme,
   createStyles,
   makeStyles,
 } from '@material-ui/core/styles'
 import {ParaMui, ParaStyled} from './Para'
+import Heading from './Heading'
 
 const muiStyles = (theme: Theme) => createStyles({
   container: {
@@ -27,14 +27,14 @@ const App = () => {
 
   return(<>
     <Container className={classes.container}>
-    <Typography variant='h5' component='h2'>ParaMui</Typography>
+    <Heading>ParaMui</Heading>
       <ParaMui className={classes.paramui}>Mui!</ParaMui>
       <ParaMui>Mui!</ParaMui>
       <ParaMui>Mui!</ParaMui>
     </Container>
 
     <Container className={classes.container}>
-    <Typography variant='h5' component='h2'>ParaStyled</Typography>
+    <Heading>ParaStyled</Heading>
       <ParaStyled>Styled!</ParaStyled>
       <ParaStyled>Styled!</ParaStyled>
       <ParaStyled>Styled!</ParaStyled>
