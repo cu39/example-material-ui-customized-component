@@ -1,28 +1,38 @@
 import * as React from 'react'
-import {StandardProps} from '@material-ui/core'
+import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import {
   Theme,
   createStyles,
-  withStyles
+  makeStyles,
 } from '@material-ui/core/styles'
+import {ParaMui} from './Para'
 
 const muiStyles = (theme: Theme) => createStyles({
-  title: {
-    backgroundColor: theme.palette.primary.light,
-  }
+  container: {
+    marginBottom: '1rem',
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },
+  paramui: {
+    backgroundColor: 'yellow',
+  },
 })
 
-interface AppBaseProps {
-  classes: {
-    title: string,
-  }
+const useStyles = makeStyles(muiStyles)
+
+const App = () => {
+  const classes = useStyles()
+
+  return(
+    <Container className={classes.container}>
+      <Typography variant='h5' component='h2'>ParaMui</Typography>
+      <ParaMui className={classes.paramui}>Mui!</ParaMui>
+      <ParaMui>Mui!</ParaMui>
+      <ParaMui>Mui!</ParaMui>
+    </Container>
+  )
 }
 
-const AppBase = ({classes}: AppBaseProps) => (
-  <Typography variant={'h1'} className={classes.title}>
-    Material-UI Works!
-  </Typography>
-)
-
-export default withStyles(muiStyles)(AppBase)
+export default App
