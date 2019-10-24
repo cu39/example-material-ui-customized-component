@@ -4,6 +4,7 @@ import {
   Theme,
   createStyles,
   makeStyles,
+  styled,
 } from '@material-ui/core/styles'
 
 const styles = {
@@ -33,3 +34,10 @@ export const ParaMui = ({children, className, ...other}: TypographyProps) => {
     </Typography>
   )
 }
+
+// with styled-components API
+const ParaStyledBase = ({children, ...other}: TypographyProps) => (
+  <Typography {...other}>{children}</Typography>
+)
+
+export const ParaStyled = styled(ParaStyledBase)(styles)

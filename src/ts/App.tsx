@@ -6,7 +6,7 @@ import {
   createStyles,
   makeStyles,
 } from '@material-ui/core/styles'
-import {ParaMui} from './Para'
+import {ParaMui, ParaStyled} from './Para'
 
 const muiStyles = (theme: Theme) => createStyles({
   container: {
@@ -25,14 +25,21 @@ const useStyles = makeStyles(muiStyles)
 const App = () => {
   const classes = useStyles()
 
-  return(
+  return(<>
     <Container className={classes.container}>
-      <Typography variant='h5' component='h2'>ParaMui</Typography>
+    <Typography variant='h5' component='h2'>ParaMui</Typography>
       <ParaMui className={classes.paramui}>Mui!</ParaMui>
       <ParaMui>Mui!</ParaMui>
       <ParaMui>Mui!</ParaMui>
     </Container>
-  )
+
+    <Container className={classes.container}>
+    <Typography variant='h5' component='h2'>ParaStyled</Typography>
+      <ParaStyled>Styled!</ParaStyled>
+      <ParaStyled>Styled!</ParaStyled>
+      <ParaStyled>Styled!</ParaStyled>
+    </Container>
+  </>)
 }
 
 export default App
