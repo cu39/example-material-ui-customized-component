@@ -1,7 +1,9 @@
 import * as React from 'react'
 import Typography, {TypographyProps} from '@material-ui/core/Typography'
 import {
+  MuiThemeProvider,
   Theme,
+  createMuiTheme,
   createStyles,
   makeStyles,
   styled,
@@ -41,3 +43,18 @@ const ParaStyledBase = ({children, ...other}: TypographyProps) => (
 )
 
 export const ParaStyled = styled(ParaStyledBase)(styles)
+
+// with child theme
+const childTheme = createMuiTheme({
+  props: {
+    MuiTypography: {
+      paragraph: true,
+    },
+  },
+})
+
+export const ParaTheme = ({children, ...other}: TypographyProps) => (
+  <MuiThemeProvider theme={childTheme}>
+    <Typography {...other}>{children}</Typography>
+  </MuiThemeProvider>
+)

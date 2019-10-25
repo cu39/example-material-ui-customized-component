@@ -5,7 +5,7 @@ import {
   createStyles,
   makeStyles,
 } from '@material-ui/core/styles'
-import {ParaMui, ParaStyled} from './Para'
+import {ParaMui, ParaStyled, ParaTheme} from './Para'
 import Heading from './Heading'
 
 const muiStyles = (theme: Theme) => createStyles({
@@ -26,6 +26,13 @@ const App = () => {
   const classes = useStyles()
 
   return(<>
+    <Container className={classes.container}>
+      <Heading>Child Theme</Heading>
+      <ParaTheme>Child Theme!</ParaTheme>
+      <ParaTheme className={classes.paramui}>Child Theme!</ParaTheme>
+      <ParaTheme>Child Theme!</ParaTheme>
+    </Container>
+
     <Container className={classes.container}>
     <Heading>ParaMui</Heading>
       <ParaMui className={classes.paramui}>Mui!</ParaMui>
