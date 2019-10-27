@@ -34,16 +34,16 @@ const App = () => {
     </Container>
 
     <Container className={classes.container}>
-    <Heading>ParaMui</Heading>
-      <ParaMui className={classes.paramui}>Mui!</ParaMui>
+      <Heading>ParaMui</Heading>
       <ParaMui>Mui!</ParaMui>
+      <ParaMui className={classes.paramui}>Mui!</ParaMui>
       <ParaMui>Mui!</ParaMui>
     </Container>
 
     <Container className={classes.container}>
-    <Heading>ParaStyled</Heading>
+      <Heading>ParaStyled</Heading>
       <ParaStyled>Styled!</ParaStyled>
-      <ParaStyled>Styled!</ParaStyled>
+      <ParaStyled className={classes.paramui}>Styled!</ParaStyled>
       <ParaStyled>Styled!</ParaStyled>
     </Container>
   </>)
