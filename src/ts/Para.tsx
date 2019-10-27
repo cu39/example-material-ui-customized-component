@@ -51,6 +51,11 @@ const childTheme = createMuiTheme({
       paragraph: true,
     },
   },
+  overrides: {
+    MuiTypography: {
+      root: styles,
+    },
+  },
 })
 
 export const ParaTheme = ({children, ...other}: TypographyProps) => (
